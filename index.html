@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Merry Christmas</title>
 
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.min.css">
     <link rel="stylesheet" href="css/index.min.css">
     <link rel="stylesheet" href="css/particles.min.css">
+    <link rel="stylesheet" href="css/modal.min.css">
 </head>
 <body>
+    <div id="message">
+        <p>Do you would like hear the music?</p>
+        <div class="message-control">
+            <button id="playButton">Yes, please!</button>
+            <button id="doNothing">No</button>
+        </div>
+    </div>
+
     <div id="ui">
         <div class="text">MERRY CHRISTMAS</div>
         <div class="text">MERRY CHRISTMAS</div>
@@ -97,9 +112,11 @@
         <div class="particle"></div>
     </div>
 
-    <audio controls="" autoplay="" name="media" hidden>
-        <source src="https://github.com/Matheus1714/merry-christmas/blob/master/audio/jingle-bell-swing.mp3?raw=true" type="audio/mp3">
+    <audio controls name="media" id="audio" hidden>
+        <source src="audio/jingle-bell-swing.mp3" type="audio/mp3">
         Seu navegador não suporta o elemento de áudio.
     </audio>
+
+    <script src="index.js"></script>
 </body>
 </html>
