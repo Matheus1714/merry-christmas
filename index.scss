@@ -3,13 +3,13 @@
 $fontSize: 10vw;
 
 body {
-  background: rgba(5, 10, 25, 1);
+  background: var(--bg-color);
   height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--text-color);
 }
 
 #ui {
@@ -18,9 +18,8 @@ body {
   .text {
     position: absolute;
     font-size: $fontSize;
-    color: #fff;
+    color: var(--text-color);
     line-height: $fontSize;
-    font-family: 'Anton', sans-serif;
     transform: translate(-50%, -50%);
     mix-blend-mode: screen;
     letter-spacing: 1rem;
