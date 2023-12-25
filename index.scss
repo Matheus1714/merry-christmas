@@ -1,0 +1,55 @@
+// Changed from: https://codepen.io/YusukeNakaya/details/KyKJBE
+
+$fontSize: 10vw;
+
+body {
+  background: rgba(5, 10, 25, 1);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#ui {
+//   transform: rotateZ(-8deg);
+
+  .text {
+    position: absolute;
+    font-size: $fontSize;
+    color: #fff;
+    line-height: $fontSize;
+    font-family: 'Anton', sans-serif;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    letter-spacing: 1rem;
+
+    @for $i from 0 through 100 {
+      $key: $i + 1;
+      &:nth-child(#{$key}) {
+        $row: floor($i / 20);
+        color: rgba(random(30), random(100), random(155) + 100, 1);
+        animation: clip#{$i} random(10000) + 10000ms ease-in-out infinite alternate;
+        filter: blur(#{random(25) - 10}px);
+        @keyframes clip#{$i} {
+          0% {
+            clip-path: circle(random(150) + 30px at random(160) - 30% random(160) - 30%);
+          }
+          25% {
+            clip-path: circle(random(150) + 30px at random(160) - 30% random(160) - 30%);
+          }
+          50% {
+            clip-path: circle(random(150) + 30px at random(160) - 30% random(160) - 30%);
+          }
+          75% {
+            clip-path: circle(random(150) + 30px at random(160) - 30% random(160) - 30%);
+          }
+          100% {
+            clip-path: circle(random(150) + 30px at random(160) - 30% random(160) - 30%);
+          }
+        }
+      }
+    }
+  }
+}
