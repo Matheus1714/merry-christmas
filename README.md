@@ -11,7 +11,7 @@ Merry Christmas animation using only HTML and SCSS.
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/merry-christmas.git
+git clone https://github.com/Matheus1714/merry-christmas.git
 ```
 
 ### Usage
